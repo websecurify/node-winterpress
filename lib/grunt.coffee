@@ -11,12 +11,17 @@ path = require 'path'
 # ---
 
 @build_folder = '.build/'
+@wintersmith_config = {}
 
 # ---
 # ---
 # ---
 
 load_npm_task = (grunt, task) ->
+	return grunt.loadNpmTasks task unless grunt.file.exists path.join __dirname, '..', 'node_modules', task
+	
+	# ---
+	
 	cwd = do process.cwd
 	
 	# ---
@@ -105,8 +110,7 @@ load_npm_task = (grunt, task) ->
 		
 		# ---
 		
-		env = wintersmith {
-		}
+		env = wintersmith self.wintersmith_config
 		
 		# ---
 		

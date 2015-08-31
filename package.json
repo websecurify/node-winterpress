@@ -1,6 +1,6 @@
 {
   "name": "winterpress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mashup of wintersmith and express running on grunt",
   "keywords": ["wintersmith", "express", "grunt"],
   "author": "Websecurify <contact@websecurify.com> (http://www.websecurify.com)",
